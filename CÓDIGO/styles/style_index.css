@@ -85,10 +85,6 @@ body {
     margin-left: 20px;
 }
 
-.logo span {
-    font-weight: 300;
-}
-
 .actions {
     display: flex;
     gap: 1.5rem;
@@ -136,7 +132,7 @@ body {
     text-decoration: none;
     color: var(--cor4);
     
-    display: flex; /* Corrigido o erro de digitação aqui */
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -148,9 +144,8 @@ body {
     text-align: center;
 }
 
-/* Controle de tamanho da imagem do ícone */
 .icone_funcoes {
-    width: 180px;
+    width: 100px;
     height: auto; 
     object-fit: contain;
     transition: transform 0.3s ease; 
@@ -180,12 +175,28 @@ body {
    RODAPÉ (FOOTER)
    ============================================================ */
 .main-footer {
+    background-color: var(--cor3);
     text-align: center;
-    padding: 2rem 1.5rem;
+    padding: 1rem 2rem;
     color: var(--cor4);
     opacity: 0.7; 
     font-size: 0.9rem;
-    margin-top: 2rem;
+    margin-top: 7rem;
+    color: black;
+    font-weight: bolder;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: var(--cor1);
+    font-weight: bolder;
+
 }
 
 /* ============================================================
