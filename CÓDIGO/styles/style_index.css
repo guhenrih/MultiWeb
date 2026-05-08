@@ -1,52 +1,6 @@
-/* ============================================================
-   VARIÁVEIS DE CORES (MODO CLARO - PADRÃO)
-   ============================================================ */
-:root {
-    /* Cor 1: Identidade Principal (Cabeçalho e Destaque) */
-    --cor1: #0077b6;
-    
-    /* Cor 2: Secundária (Gradiente e Detalhes) */
-    --cor2: #00b4d8;
-    
-    /* Cor 3: Interação (Fundo dos cards das ferramentas) */
-    --cor3: #cffafe;
-    
-    /* Cor 4: Texto e Ícones (Contraste escuro para leitura) */
-    --cor4: #042f2e;
-    
-    /* Cor 5: Fundo Geral (A cor de base da página) */
-    --cor5: #f0fdfa;
-    
-    /* Cor 6: Contraste de Texto (Branco para o topo) */
-    --cor6: #ffffff;
+@import url('cores.css');
 
-    /* Outras Configurações */
-    --raio-card: 40px;
-    --sombra-card: 0 10px 25px rgba(0, 0, 0, 0.492);
-    --transicao: 0.3s ease;
-}
-
-/* ============================================================
-   VARIÁVEIS DE CORES (MODO ESCURO - MEDIA QUERY)
-   ============================================================ 
-@media (prefers-color-scheme: dark) {
-    :root {
-         Tons mais escuros e suaves para evitar fadiga visual 
-        --cor1: #005f8e; 
-        --cor2: #007ba7; 
-        --cor3: #1e293b;  Fundo dos cards escuro 
-        --cor4: #e2e8f0;  Texto claro (cinza quase branco) 
-        --cor5: #0f172a;  Fundo da página bem escuro 
-        --cor6: #f8fafc;  Texto do cabeçalho 
-        
-        --sombra-card: 0 10px 25px rgba(0, 0, 0, 0.4);  Sombra mais forte no modo escuro
-    }
-}*/
-
-/* ============================================================
-   RESET E CONFIGURAÇÕES GERAIS
-   ============================================================ */
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -91,13 +45,13 @@ body {
     margin-right: 20px;
 }
 
-.btn-icon {
-    background: transparent;
-    border: none;
-    color: var(--cor6);
-    font-size: 1.6rem;
-    cursor: pointer;
-    transition: transform var(--transicao);
+.btn-icon { 
+    background: transparent; 
+    border: none; 
+    color: white; 
+    font-size: 1.6rem; 
+    cursor: pointer; 
+    text-decoration: none; 
 }
 
 .btn-icon:hover {

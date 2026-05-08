@@ -1,0 +1,219 @@
+/* ============================================================
+   IMPORTAÇÃO DAS CORES (Obrigatório)
+   ============================================================ */
+@import url('cores.css');
+
+/* ============================================================
+   RESET E ESTILOS BASE (Substituindo o index.css)
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--cor5);
+    color: var(--cor4);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================================
+   HEADER E FOOTER (Estilizados aqui para serem independentes)
+   ============================================================ */
+.main-header {
+    background: linear-gradient(to right, var(--cor1), var(--cor2));
+    color: var(--cor6);
+    /* Removido o padding: 0 daqui para aplicar diretamente no conteúdo */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    width: 100%; /* Substitui o max-width para os ícones irem para as extremidades */
+    padding: 1rem 2rem; /* Controla a distância dos ícones em relação à borda da tela */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { 
+    font-size: 2rem; 
+    font-weight: 800; 
+}
+
+.actions { 
+    display: flex; 
+    gap: 1.5rem;
+}
+
+.btn-icon{ 
+    background: transparent; 
+    display: flex;
+    border: none; 
+    color: white; 
+    font-size: 1.6rem; 
+    cursor: pointer; 
+    text-decoration: none;
+    transition: transform 0.2s; /* Adicionado para suavizar o hover */
+}
+
+.btn-icon:hover {
+    transform: scale(1.1);
+}
+
+.main-footer {
+    background-color: var(--cor3);
+    text-align: center;
+    padding: 1rem 2rem;
+    color: var(--cor4);
+    opacity: 0.7; 
+    font-size: 0.9rem;
+    margin-top: 7rem;
+    color: black;
+    font-weight: bolder;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: var(--cor1);
+    font-weight: bolder;
+}
+
+/* ============================================================
+   ESTRUTURA DA FERRAMENTA
+   ============================================================ */
+.main {
+    padding: 3rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Garante que o main ocupe o espaço restante e empurre o footer para baixo */
+}
+
+.ferramenta-container {
+    background-color: var(--cor6); 
+    border-radius: var(--raio-card);
+    box-shadow: var(--sombra-card);
+    padding: 2.5rem 2rem; /* Leve ajuste de espaçamento interno */
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+/* ============================================================
+   CONTROLE DE TAMANHO DO ÍCONE (Ajuste aqui!)
+   ============================================================ */
+.icone_combustivel {
+    width: 120px; /* Altere este valor para o tamanho que desejar */
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+}
+
+.ferramenta-cabecalho h2 { 
+    font-size: 1.8rem; 
+    color: var(--cor4); 
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.ferramenta-cabecalho p { 
+    color: var(--cor4); 
+    opacity: 0.7; 
+    margin-bottom: 2rem;
+}
+
+/* ============================================================
+   INPUTS E BOTÕES
+   ============================================================ */
+.input-group { 
+    display: flex; 
+    flex-direction: column; 
+    text-align: left; 
+    margin-bottom: 1.2rem; 
+}
+
+.input-group label { 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    font-size: 0.9rem; 
+}
+
+.input-group input { 
+    padding: 12px; 
+    border: 2px solid var(--cor3); 
+    border-radius: 10px; 
+    font-size: 1.1rem; 
+    background: transparent;
+    color: var(--cor4);
+    outline: none; /* Adicionado para remover a borda padrão do navegador */
+    transition: border 0.3s ease; /* Adicionado para a transição de cor do foco */
+}
+
+/* Adicionado: Efeito ao clicar no input para digitar */
+.input-group input:focus {
+    border-color: var(--cor1);
+}
+
+.btn-principal { 
+    width: 100%; 
+    padding: 15px; 
+    background: linear-gradient(to right, var(--cor1), var(--cor2)); 
+    color: white; 
+    border: none; 
+    border-radius: 10px; 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    cursor: pointer; 
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s; /* Sombra suave ao passar o rato */
+}
+
+.btn-principal:hover { 
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 119, 182, 0.3);
+}
+
+/* ============================================================
+   RESULTADO
+   ============================================================ */
+.resultado-simples { 
+    margin-top: 2rem; 
+    padding: 1.5rem; 
+    border-radius: 15px; 
+    background-color: var(--cor5); 
+    border: 1px solid var(--cor3); 
+}
+
+/* Adicionado: Estilização do texto do resultado */
+#texto-resultado {
+    font-size: 1.1rem;
+    color: var(--cor4);
+    line-height: 1.4;
+}
+
+/* ============================================================
+   RESPONSIVIDADE (CELULARES E TELAS PEQUENAS)
+   ============================================================ */
+@media (max-width: 600px) {
+    .header-content {
+        padding: 1rem; /* Reduz o espaçamento lateral no telemóvel */
+    }
+    
+    .logo {
+        font-size: 1.6rem;
+    }
+    
+    .ferramenta-container {
+        padding: 2rem 1.5rem;
+    }
+}

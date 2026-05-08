@@ -1,0 +1,15 @@
+/* ============================================================
+   PALETA DE CORES GLOBAL
+   ============================================================ */
+:root {
+    --cor1: #0077b6;
+    --cor2: #00b4d8;
+    --cor3: #cffafe;
+    --cor4: #042f2e;
+    --cor5: #f0fdfa;
+    --cor6: #ffffff;
+
+    --raio-card: 40px;
+    --sombra-card: 0 10px 25px rgba(0, 0, 0, 0.492);
+    --transicao: 0.3s ease;
+}
