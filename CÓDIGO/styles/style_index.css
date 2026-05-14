@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column; /* Necessário para empurrar o footer pro final */
+    margin: 0;
 }
 
 /* ============================================================
@@ -33,10 +34,21 @@ body {
     align-items: center;
 }
 
+.header-content a{
+    text-decoration: none;
+    color: white;
+}
+
 .logo {
+    text-decoration: none;
     font-size: 2rem;
     font-weight: 800;
     margin-left: 20px;
+    transition: transform 0.2s; 
+}
+
+.logo:hover{
+    transform: scale(1.01);
 }
 
 .actions {
@@ -66,13 +78,15 @@ body {
     max-width: 1100px;
     margin: 3.5rem auto;
     padding: 0 1.5rem;
+    flex: 1;
 }
 
 .sessao_funcoes {
-    display: grid; /* Mudado de flex para grid */
-    grid-template-columns: repeat(3, 1fr); /* Trava em 3 colunas */
-    gap: 2.5rem;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 2.5rem; 
 }
 
 /* ============================================================
@@ -82,7 +96,7 @@ body {
     background-color: var(--cor3);
     width: 100%;
     max-width: 300px;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1; 
     text-decoration: none;
     color: var(--cor4);
     
@@ -93,7 +107,7 @@ body {
     
     border-radius: var(--raio-card);
     box-shadow: var(--sombra-card);
-    transition: transform var(--transicao), box-shadow var(--transicao);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 2rem;
     text-align: center;
 }
@@ -128,16 +142,17 @@ body {
 /* ============================================================
    RODAPÉ (FOOTER)
    ============================================================ */
-.main-footer {
+   .main-footer {
     background-color: var(--cor3);
     text-align: center;
     padding: 1rem 2rem;
-    color: var(--cor4);
     opacity: 0.7; 
     font-size: 0.9rem;
-    margin-top: 7rem;
-    color: black;
+    color: black; /* Mantive a cor preta que estava sobrescrevendo a var(--cor4) */
     font-weight: bolder;
+    
+    /* Adicione isso caso não tenha usado o flex: 1 no .main */
+    margin-top: auto; 
 }
 
 footer a {
@@ -150,7 +165,6 @@ footer a:hover {
     text-decoration: none;
     color: var(--cor1);
     font-weight: bolder;
-
 }
 
 /* ============================================================
@@ -163,7 +177,6 @@ footer a:hover {
     }
 }
 
-/* Telas pequenas: cai para 1 coluna */
 @media (max-width: 600px) {
     .main {
         margin: 2rem auto;

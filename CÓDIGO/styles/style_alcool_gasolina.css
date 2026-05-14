@@ -27,21 +27,30 @@ body {
 .main-header {
     background: linear-gradient(to right, var(--cor1), var(--cor2));
     color: var(--cor6);
-    /* Removido o padding: 0 daqui para aplicar diretamente no conteúdo */
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
-    width: 100%; /* Substitui o max-width para os ícones irem para as extremidades */
-    padding: 1rem 2rem; /* Controla a distância dos ícones em relação à borda da tela */
+    width: 100%; 
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.header-content a{
+    text-decoration: none;
+    color: white;
+}
+
 .logo { 
     font-size: 2rem; 
-    font-weight: 800; 
+    font-weight: 800;
+    transition: transform 0.2s; 
+}
+
+.logo:hover{
+    transform: scale(1.01);
 }
 
 .actions { 
@@ -57,23 +66,25 @@ body {
     font-size: 1.6rem; 
     cursor: pointer; 
     text-decoration: none;
-    transition: transform 0.2s; /* Adicionado para suavizar o hover */
+    transition: transform 0.2s;
 }
 
 .btn-icon:hover {
     transform: scale(1.1);
 }
 
-.main-footer {
+/* ============================================================
+   RODAPÉ (FOOTER)
+   ============================================================ */
+   .main-footer {
     background-color: var(--cor3);
     text-align: center;
     padding: 1rem 2rem;
-    color: var(--cor4);
     opacity: 0.7; 
     font-size: 0.9rem;
-    margin-top: 7rem;
-    color: black;
+    color: black; 
     font-weight: bolder;
+    margin-top: auto; 
 }
 
 footer a {
@@ -96,7 +107,7 @@ footer a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1; /* Garante que o main ocupe o espaço restante e empurre o footer para baixo */
+    flex: 1; 
 }
 
 .ferramenta-container {
@@ -155,11 +166,11 @@ footer a:hover {
     font-size: 1.1rem; 
     background: transparent;
     color: var(--cor4);
-    outline: none; /* Adicionado para remover a borda padrão do navegador */
-    transition: border 0.3s ease; /* Adicionado para a transição de cor do foco */
+    outline: none;
+    transition: border 0.3s ease; 
 }
 
-/* Adicionado: Efeito ao clicar no input para digitar */
+
 .input-group input:focus {
     border-color: var(--cor1);
 }
@@ -175,7 +186,7 @@ footer a:hover {
     font-weight: bold; 
     cursor: pointer; 
     text-transform: uppercase;
-    transition: transform 0.2s, box-shadow 0.2s; /* Sombra suave ao passar o rato */
+    transition: transform 0.2s, box-shadow 0.2s; 
 }
 
 .btn-principal:hover { 
@@ -194,7 +205,6 @@ footer a:hover {
     border: 1px solid var(--cor3); 
 }
 
-/* Adicionado: Estilização do texto do resultado */
 #texto-resultado {
     font-size: 1.1rem;
     color: var(--cor4);
@@ -206,7 +216,7 @@ footer a:hover {
    ============================================================ */
 @media (max-width: 600px) {
     .header-content {
-        padding: 1rem; /* Reduz o espaçamento lateral no telemóvel */
+        padding: 1rem;
     }
     
     .logo {
