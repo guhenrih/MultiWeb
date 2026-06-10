@@ -1,15 +1,34 @@
 /* ============================================================
-   PALETA DE CORES GLOBAL
+   PALETA DE CORES GLOBAL (TEMA CLARO)
    ============================================================ */
 :root {
     --cor1: #0077b6;
     --cor2: #00b4d8;
     --cor3: #cffafe;
     --cor4: #042f2e;
-    --cor5: #f0fdfa;
+    --cor5: #d6d6d6;
     --cor6: #ffffff;
 
     --raio-card: 40px;
-    --sombra-card: 0 10px 25px rgba(0, 0, 0, 0.492);
+    --sombra-card: 0 10px 25px rgba(0, 0, 0, 0.40); /* Suavizei a sombra clara */
     --transicao: 0.3s ease;
+}
+
+/* ============================================================
+   PALETA DE CORES GLOBAL (TEMA ESCURO)
+   ============================================================ */
+body.dark-mode {
+    --cor1: #022838; /* Azul claro brilhante (destaque para gradientes e botões) */
+    --cor2: #11425a; /* Azul médio (complemento do gradiente) */
+    --cor3: #334155; /* Cinza-azulado médio (rodapé, bordas e hover do menu) */
+    --cor4: #d3c7c7; /* Branco suave (cor principal das letras, não cansa a vista) */
+    --cor5: #060a0c; /* Azul-marinho quase preto (fundo de todo o site) */
+    --cor6: #1e293b; /* Cinza-azulado escuro (fundo dos cards e do menu lateral) */
+    
+    --sombra-card: 0 10px 25px rgba(0, 0, 0, 0.7); /* Sombra mais forte no escuro */
+}
+
+/* Adicionando uma transição suave quando mudar de tema */
+body {
+    transition: background-color var(--transicao), color var(--transicao);
 }
