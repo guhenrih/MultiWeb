@@ -1,11 +1,5 @@
-/* ============================================================
-   IMPORTAÇÃO DAS CORES (Obrigatório)
-   ============================================================ */
 @import url('cores.css');
 
-/* ============================================================
-   RESET E ESTILOS BASE (Substituindo o index.css)
-   ============================================================ */
 * {
     margin: 0;
     padding: 0;
@@ -21,16 +15,17 @@ body {
     flex-direction: column;
 }
 
-/* ============================================================
-   HEADER E FOOTER (Estilizados aqui para serem independentes)
-   ============================================================ */
-.main-header {
+p { text-align: justify; }
+.texto-centralizado { text-align: center; }
+
+/* Cabecalho */
+.cabecalho-principal {
     background: linear-gradient(to right, var(--cor1), var(--cor2));
     color: var(--cor6);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-.header-content {
+.conteudo-cabecalho {
     width: 100%; 
     padding: 1rem 2rem;
     display: flex;
@@ -38,27 +33,25 @@ body {
     align-items: center;
 }
 
-.header-content a{
+.conteudo-cabecalho a {
     text-decoration: none;
     color: white;
 }
 
-.logo { 
+.logomarca { 
     font-size: 2rem; 
     font-weight: 800;
-    transition: transform 0.2s; 
+    transition: transform var(--transicao); 
 }
 
-.logo:hover{
-    transform: scale(1.01);
-}
+.logomarca:hover { transform: scale(1.01); }
 
-.actions { 
+.acoes { 
     display: flex; 
     gap: 1.5rem;
 }
 
-.btn-icon{ 
+.botao-icone { 
     background: transparent; 
     display: flex;
     border: none; 
@@ -66,43 +59,33 @@ body {
     font-size: 1.6rem; 
     cursor: pointer; 
     text-decoration: none;
-    transition: transform 0.2s;
+    transition: transform var(--transicao);
 }
 
-.btn-icon:hover {
-    transform: scale(1.1);
-}
+.botao-icone:hover { transform: scale(1.1); }
 
-/* ============================================================
-   RODAPÉ (FOOTER)
-   ============================================================ */
-   .main-footer {
+/* Rodape */
+.rodape-principal {
     background-color: var(--cor3);
     text-align: center;
     padding: 1rem 2rem;
     opacity: 0.7; 
     font-size: 0.9rem;
-    color: black; 
+    color: var(--cor4);
     font-weight: bolder;
     margin-top: auto; 
 }
 
-footer a {
+.rodape-principal a {
     text-decoration: none;
-    color: black;
+    color: var(--cor4);
     font-weight: bolder;
 }
 
-footer a:hover {
-    text-decoration: none;
-    color: var(--cor1);
-    font-weight: bolder;
-}
+.rodape-principal a:hover { color: var(--cor1); }
 
-/* ============================================================
-   ESTRUTURA DA FERRAMENTA
-   ============================================================ */
-.main {
+/* Conteudo Principal */
+.conteudo-principal {
     padding: 3rem 1.5rem;
     display: flex;
     justify-content: center;
@@ -110,56 +93,51 @@ footer a:hover {
     flex: 1; 
 }
 
-.ferramenta-container {
+.container-ferramenta {
     background-color: var(--cor6); 
     border-radius: var(--raio-card);
     box-shadow: var(--sombra-card);
-    padding: 2.5rem 2rem; /* Leve ajuste de espaçamento interno */
+    padding: 2.5rem 2rem;
     max-width: 450px;
     width: 100%;
     text-align: center;
 }
 
-/* ============================================================
-   CONTROLE DE TAMANHO DO ÍCONE (Ajuste aqui!)
-   ============================================================ */
-.icone_combustivel {
-    width: 120px; /* Altere este valor para o tamanho que desejar */
+.icone-ferramenta {
+    width: 120px;
     height: auto;
     display: block;
     margin: 0 auto 1.5rem auto;
 }
 
-.ferramenta-cabecalho h2 { 
+.cabecalho-ferramenta h2 { 
     font-size: 1.8rem; 
     color: var(--cor4); 
     text-transform: uppercase;
     margin-bottom: 5px;
 }
 
-.ferramenta-cabecalho p { 
+.cabecalho-ferramenta p { 
     color: var(--cor4); 
     opacity: 0.7; 
     margin-bottom: 2rem;
 }
 
-/* ============================================================
-   INPUTS E BOTÕES
-   ============================================================ */
-.input-group { 
+/* Formularios e Botoes */
+.grupo-input { 
     display: flex; 
     flex-direction: column; 
     text-align: left; 
     margin-bottom: 1.2rem; 
 }
 
-.input-group label { 
+.grupo-input label { 
     font-weight: bold; 
     margin-bottom: 5px; 
     font-size: 0.9rem; 
 }
 
-.input-group input { 
+.grupo-input input { 
     padding: 12px; 
     border: 2px solid var(--cor3); 
     border-radius: 10px; 
@@ -167,15 +145,12 @@ footer a:hover {
     background: transparent;
     color: var(--cor4);
     outline: none;
-    transition: border 0.3s ease; 
+    transition: border var(--transicao); 
 }
 
+.grupo-input input:focus { border-color: var(--cor1); }
 
-.input-group input:focus {
-    border-color: var(--cor1);
-}
-
-.btn-principal { 
+.botao-principal { 
     width: 100%; 
     padding: 15px; 
     background: linear-gradient(to right, var(--cor1), var(--cor2)); 
@@ -186,17 +161,14 @@ footer a:hover {
     font-weight: bold; 
     cursor: pointer; 
     text-transform: uppercase;
-    transition: transform 0.2s, box-shadow 0.2s; 
+    transition: transform var(--transicao), box-shadow var(--transicao); 
 }
 
-.btn-principal:hover { 
+.botao-principal:hover { 
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 119, 182, 0.3);
 }
 
-/* ============================================================
-   RESULTADO
-   ============================================================ */
 .resultado-simples { 
     margin-top: 2rem; 
     padding: 1.5rem; 
@@ -211,19 +183,102 @@ footer a:hover {
     line-height: 1.4;
 }
 
-/* ============================================================
-   RESPONSIVIDADE (CELULARES E TELAS PEQUENAS)
-   ============================================================ */
+/* Video Responsivo */
+.container-video {
+    width: 100%;
+    max-width: 540px;
+    aspect-ratio: 16 / 9;
+    margin: 2rem auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+}
+
+.container-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Carrossel de Fotos */
+.carrossel-externo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto 3rem auto;
+}
+
+.container-carrossel {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3; 
+    background-color: var(--cor6);
+    transform: translateY(-10px);
+    box-shadow: 0 30px 35px -15px rgba(0, 0, 0, 0.45);
+    transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.container-carrossel:hover {
+    transform: translateY(-14px);
+    box-shadow: 0 35px 40px -15px rgba(0, 0, 0, 0.55);
+}
+
+.trilho-carrossel {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.item-carrossel {
+    min-width: 100%;
+    height: 100%;
+}
+
+.item-carrossel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.botao-carrossel {
+    background-color: var(--cor3);
+    color: var(--cor4);
+    border: none;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transicao), transform var(--transicao), color var(--transicao);
+    flex-shrink: 0;
+}
+
+.botao-carrossel:hover {
+    background-color: var(--cor1);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Responsividade Mobile */
 @media (max-width: 600px) {
-    .header-content {
-        padding: 1rem;
-    }
-    
-    .logo {
-        font-size: 1.6rem;
-    }
-    
-    .ferramenta-container {
-        padding: 2rem 1.5rem;
+    .conteudo-cabecalho { padding: 1rem; }
+    .logomarca { font-size: 1.6rem; }
+    .container-ferramenta { padding: 2rem 1.5rem; }
+}
+
+@media (max-width: 500px) {
+    .carrossel-externo { gap: 10px; }
+    .botao-carrossel {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
     }
 }

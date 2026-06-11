@@ -1,6 +1,6 @@
 @import url('cores.css');
 
- * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,21 +12,19 @@ body {
     color: var(--cor4);
     min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Necessário para empurrar o footer pro final */
+    flex-direction: column;
     margin: 0;
 }
 
-/* ============================================================
-   CABEÇALHO (HEADER)
-   ============================================================ */
-.main-header {
+/* Cabecalho */
+.cabecalho-principal {
     background: linear-gradient(to right, var(--cor1), var(--cor2));
     color: var(--cor6);
     padding: 1rem 0;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-.header-content {
+.conteudo-cabecalho {
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -34,54 +32,50 @@ body {
     align-items: center;
 }
 
-.header-content a{
+.conteudo-cabecalho a {
     text-decoration: none;
     color: white;
 }
 
-.logo {
-    text-decoration: none;
+.logomarca {
     font-size: 2rem;
     font-weight: 800;
     margin-left: 20px;
-    transition: transform 0.2s; 
+    transition: transform var(--transicao); 
 }
 
-.logo:hover{
-    transform: scale(1.01);
-}
+.logomarca:hover { transform: scale(1.01); }
 
-.actions {
+.acoes {
     display: flex;
     gap: 1.5rem;
     margin-right: 20px;
 }
 
-.btn-icon { 
+.botao-icone { 
     background: transparent; 
     border: none; 
     color: white; 
     font-size: 1.6rem; 
     cursor: pointer; 
     text-decoration: none; 
+    transition: transform var(--transicao), opacity var(--transicao);
 }
 
-.btn-icon:hover {
+.botao-icone:hover {
     transform: scale(1.1);
     opacity: 0.9;
 }
 
-/* ============================================================
-   CONTEÚDO PRINCIPAL E GRID
-   ============================================================ */
-.main {
+/* Conteudo Principal e Grelha */
+.conteudo-principal {
     max-width: 1100px;
     margin: 3.5rem auto;
     padding: 0 1.5rem;
     flex: 1;
 }
 
-.sessao_funcoes {
+.secao-funcoes {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
@@ -89,43 +83,39 @@ body {
     gap: 2.5rem; 
 }
 
-/* ============================================================
-   CARDS DAS FERRAMENTAS
-   ============================================================ */
-.funcao {
+/* Cartoes das Ferramentas */
+.cartao-funcao {
     background-color: var(--cor3);
     width: 100%;
     max-width: 300px;
     aspect-ratio: 1 / 1; 
     text-decoration: none;
     color: var(--cor4);
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
     border-radius: var(--raio-card);
     box-shadow: var(--sombra-card);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transicao), box-shadow var(--transicao);
     padding: 2rem;
     text-align: center;
 }
 
-.icone_funcoes {
+.icone-ferramenta {
     width: 100px;
     height: auto; 
     object-fit: contain;
-    transition: transform 0.3s ease; 
+    transition: transform var(--transicao); 
     font-weight: bolder;
 }
 
-.funcao:hover {
+.cartao-funcao:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-.icone-container {
+.caixa-icone {
     font-size: 4.5rem;
     margin-bottom: 1.5rem;
     display: flex;
@@ -133,92 +123,51 @@ body {
     justify-content: center;
 }
 
-.funcao h2 {
+.cartao-funcao h2 {
     font-size: 1.2rem;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 1.2;
 }
 
-/* ============================================================
-   RODAPÉ (FOOTER)
-   ============================================================ */
-   .main-footer {
+/* Rodape */
+.rodape-principal {
     background-color: var(--cor3);
     text-align: center;
     padding: 1rem 2rem;
     opacity: 0.7; 
     font-size: 0.9rem;
-    color: black; /* Mantive a cor preta que estava sobrescrevendo a var(--cor4) */
+    color: var(--cor4);
     font-weight: bolder;
-    
-    /* Adicione isso caso não tenha usado o flex: 1 no .main */
     margin-top: auto; 
 }
 
-footer a {
+.rodape-principal a {
     text-decoration: none;
-    color: black;
+    color: var(--cor4);
     font-weight: bolder;
 }
 
-footer a:hover {
-    text-decoration: none;
-    color: var(--cor1);
-    font-weight: bolder;
-}
+.rodape-principal a:hover { color: var(--cor1); }
 
-/* ============================================================
-   RESPONSIVIDADE (TABLETS E MOBILE)
-   ============================================================ */
-/* Telas médias: cai para 2 colunas */
-@media (max-width: 960px) {
-    .sessao_funcoes {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .main {
-        margin: 2rem auto;
-    }
-    
-    .logo {
-        font-size: 1.6rem;
-    }
-
-    .sessao_funcoes {
-        grid-template-columns: 1fr;
-    }
-
-    .funcao {
-        max-width: 260px;
-    }
-}
-
-/* ============================================================
-   MENU LATERAL (HAMBÚRGUER)
-   ============================================================ */
+/* Menu Lateral (Hamburguer) */
 .menu-lateral {
     position: fixed;
     top: 0;
-    right: -300px; /* Começa escondido fora da tela */
+    right: -300px; 
     width: 280px;
     height: 100vh;
-    background-color: var(--cor6); /* Cor branca da sua paleta */
+    background-color: var(--cor6); 
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-    transition: right 0.3s ease;
+    transition: right var(--transicao);
     z-index: 1000;
     display: flex;
     flex-direction: column;
 }
 
-/* Classe que o JS vai adicionar para mostrar o menu */
-.menu-lateral.aberto {
-    right: 0;
-}
+.menu-lateral.aberto { right: 0; }
 
-.menu-cabecalho {
+.cabecalho-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -227,25 +176,23 @@ footer a:hover {
     color: white;
 }
 
-.btn-fechar {
+.botao-fechar {
     background: transparent;
     border: none;
     color: white;
     font-size: 2rem;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform var(--transicao);
 }
 
-.btn-fechar:hover {
-    transform: scale(1.1);
-}
+.botao-fechar:hover { transform: scale(1.1); }
 
-.menu-links {
+.links-menu {
     display: flex;
     flex-direction: column;
 }
 
-.menu-links a {
+.links-menu a {
     padding: 1rem 1.5rem;
     text-decoration: none;
     color: var(--cor4);
@@ -253,18 +200,17 @@ footer a:hover {
     font-size: 1.1rem;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--cor3);
     gap: 15px;
-    transition: background 0.2s, color 0.2s;
+    transition: background var(--transicao), color var(--transicao);
 }
 
-.menu-links a:hover {
+.links-menu a:hover {
     background-color: var(--cor3);
     color: var(--cor1);
 }
 
-/* Fundo escurecido atrás do menu */
-.overlay {
+.camada-escura {
     position: fixed;
     top: 0;
     left: 0;
@@ -274,10 +220,22 @@ footer a:hover {
     z-index: 999;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s;
+    transition: opacity var(--transicao), visibility var(--transicao);
 }
 
-.overlay.ativo {
+.camada-escura.ativo {
     visibility: visible;
     opacity: 1;
+}
+
+/* Responsividade Tablets e Mobile */
+@media (max-width: 960px) {
+    .secao-funcoes { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .conteudo-principal { margin: 2rem auto; }
+    .logomarca { font-size: 1.6rem; }
+    .secao-funcoes { grid-template-columns: 1fr; }
+    .cartao-funcao { max-width: 260px; }
 }

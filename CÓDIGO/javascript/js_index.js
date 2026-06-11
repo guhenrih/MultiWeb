@@ -1,46 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Cria a estrutura HTML do menu e do overlay
     const menuHTML = `
-        <div class="overlay" id="menu-overlay"></div>
+        <div class="camada-escura" id="camada-escura"></div>
         <aside class="menu-lateral" id="menu-lateral">
-            <div class="menu-cabecalho">
+            <div class="cabecalho-menu">
                 <h2>Menu</h2>
-                <button type="button" class="btn-fechar" id="btn-fechar-menu">&times;</button>
+                <button type="button" class="botao-fechar" id="botao-fechar">&times;</button>
             </div>
-            <nav class="menu-links">
-                <a href="sobre_projeto.html">Sobre o Projeto</a>
-                <a href="https://github.com/guhenrih" target="_blank">Sobre o Criador</a>
-                <a href="#"> Sugerir Ferramenta </a>
-                <a href="#"> Contato </a>
+            <nav class="links-menu">
+                <a href="sobre_projeto.html"><i class="fas fa-info-circle"></i> Sobre o Projeto</a>
+                <a href="sobre_mim.html"><i class="fas fa-user"></i> Sobre o Criador</a>
+                <a href="guia_ferramentas.html"><i class="fas fa-book"></i> Guia de Ferramentas</a>
             </nav>
         </aside>
     `;
 
-    // 2. Injeta o HTML no final do <body>
     document.body.insertAdjacentHTML('beforeend', menuHTML);
 
-    // 3. Agora que o HTML existe na página, pegamos os elementos
-    const btnMenu = document.getElementById("btn-menu");
-    const btnFechar = document.getElementById("btn-fechar-menu");
+    const botaoMenu = document.getElementById("botao-menu");
+    const botaoFechar = document.getElementById("botao-fechar");
     const menuLateral = document.getElementById("menu-lateral");
-    const overlay = document.getElementById("menu-overlay");
+    const camadaEscura = document.getElementById("camada-escura");
 
-    // 4. Funções para abrir e fechar
     function abrirMenu() {
         menuLateral.classList.add("aberto");
-        overlay.classList.add("ativo");
+        camadaEscura.classList.add("ativo");
     }
 
     function fecharMenu() {
         menuLateral.classList.remove("aberto");
-        overlay.classList.remove("ativo");
+        camadaEscura.classList.remove("ativo");
     }
 
-    // 5. Eventos de clique (verifica se o btnMenu existe na página atual antes de adicionar o evento)
-    if (btnMenu) {
-        btnMenu.addEventListener("click", abrirMenu);
+    if (botaoMenu) {
+        botaoMenu.addEventListener("click", abrirMenu);
     }
     
-    btnFechar.addEventListener("click", fecharMenu);
-    overlay.addEventListener("click", fecharMenu);
+    botaoFechar.addEventListener("click", fecharMenu);
+    camadaEscura.addEventListener("click", fecharMenu);
 });

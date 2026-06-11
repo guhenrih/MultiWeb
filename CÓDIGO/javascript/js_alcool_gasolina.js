@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const inputAlcool = document.getElementById("preco-alcool");
     const inputGasolina = document.getElementById("preco-gasolina");
-    const btnCalcular = document.getElementById("btn-calcular");
+    const botaoCalcular = document.getElementById("botao-calcular");
     const textoResultado = document.getElementById("texto-resultado");
 
-    btnCalcular.addEventListener("click", () => {
+    botaoCalcular.addEventListener("click", () => {
         const precoAlcool = parseFloat(inputAlcool.value.replace(',', '.'));
         const precoGasolina = parseFloat(inputGasolina.value.replace(',', '.'));
 

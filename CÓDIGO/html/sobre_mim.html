@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiWeb - Sobre Mim</title>
+    <link rel="stylesheet" href="../styles/style_ferramentas.css">
+</head>
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="conteudo-cabecalho">
+            <a href="index.html" class="botao-icone">
+                <img src="../icones/voltar.svg" alt="seta para voltar" class="botao-icone">
+            </a>
+            <a href="index.html"><h1 class="logomarca">MultiWeb</h1></a>
+            
+            <div class="acoes">
+                <button type="button" class="botao-icone" id="botao-tema">
+                    <img src="../icones/modo_escuro.svg" alt="tema claro ou escuro">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+        <div class="container-ferramenta" style="text-align: left; padding: 3rem 2rem; max-width: 700px;">
+            
+            <div class="cabecalho-ferramenta" style="text-align: center;">
+                <h2>Sobre o Criador</h2>
+                <p class="texto-centralizado" >Conheça quem está por trás do projeto.</p>
+            </div>
+
+            <div class="carrossel-externo">
+                <button class="botao-carrossel anterior" id="botao-anterior">&#10094;</button>
+                
+                <div class="container-carrossel">
+                    <div class="trilho-carrossel" id="trilho-carrossel">
+                        <div class="item-carrossel">
+                            <img src="../imgs/m1.jpeg" alt="Foto 1 do Gustavo">
+                        </div>
+                        <div class="item-carrossel">
+                            <img src="../imgs/m2.jpeg" alt="Foto 2 do Gustavo">
+                        </div>
+                        <div class="item-carrossel">
+                            <img src="../imgs/m3.jpeg" alt="Foto 3 do Gustavo">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="botao-carrossel proximo" id="botao-proximo">&#10095;</button>
+            </div>
+
+            <div class="texto-sobre" style="color: var(--cor4); line-height: 1.6; font-size: 1.1rem;">
+                <p style="margin-bottom: 1rem;">
+                    Olá! Meu nome é <strong>Gustavo Henrique de Almeida</strong>, tenho 20 anos e sou natural de Congonhinhas - PR. Atualmente, atuo como Agente Administrativo no setor de licitações da Prefeitura de Leópolis, mas em breve retornarei para minha cidade natal, onde conquistei o 1º lugar no concurso público para o mesmo cargo.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    Paralelamente à trajetória na administração pública, estou no 4º semestre de Engenharia de Software na UTFPR. Busco sempre alinhar organização e eficiência ao desenvolvimento tecnológico para criar soluções práticas.
+                </p>
+                <p>
+                    O MultiWeb nasceu justamente dessa vontade de construir ferramentas funcionais, com uma interface limpa, concisa e sem poluição visual, para facilitar as pequenas tarefas do dia a dia.
+                </p>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="rodape-principal">
+        <p class="texto-centralizado">&copy; 2026 MultiWeb - <a href="https://github.com/guhenrih" target="_blank">Gustavo Henrique de Almeida</a>.</p>
+    </footer>
+
+    <script src="../javascript/js_tema.js"></script>
+    <script src="../javascript/js_sobre_mim.js"></script>
+</body>
+</html>

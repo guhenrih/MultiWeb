@@ -4,62 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MultiWeb - Racha Conta</title>
-    
     <link rel="stylesheet" href="../styles/style_ferramentas.css">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="header-content">
-            <a href="index.html" class="btn-icon">
-                <img src="../icones/voltar.svg" alt="seta para voltar" class="btn-icon">
+    <header class="cabecalho-principal">
+        <div class="conteudo-cabecalho">
+            <a href="index.html" class="botao-icone">
+                <img src="../icones/voltar.svg" alt="seta para voltar" class="botao-icone">
             </a>
-            <a href="index.html"><h1 class="logo">MultiWeb</h1></a>
+            <a href="index.html"><h1 class="logomarca">MultiWeb</h1></a>
             
-            <div class="actions">
-                <button type="button" class="btn-icon" id="btn-tema">
+            <div class="acoes">
+                <button type="button" class="botao-icone" id="botao-tema">
                     <img src="../icones/modo_escuro.svg" alt="tema claro ou escuro">
                 </button>
             </div>
         </div>
     </header>
 
-    <main class="main">
-        <div class="ferramenta-container">
+    <main class="conteudo-principal">
+        <div class="container-ferramenta">
             
-            <div class="ferramenta-cabecalho">
-                <img src="../icones/racha_conta.svg" alt="ícone de dividir conta" class="icone_combustivel">
+            <div class="cabecalho-ferramenta">
+                <img src="../icones/racha_conta.svg" alt="ícone de dividir conta" class="icone-ferramenta">
                 <h2>Racha Conta</h2>
                 <p>Divida a conta do rolê sem complicação.</p>
             </div>
 
-            <div class="calculadora-box">
-                <div class="input-group">
+            <div class="caixa-calculadora">
+                <div class="grupo-input">
                     <label for="valor-conta">Valor Total da Conta (R$)</label>
                     <input type="number" id="valor-conta" placeholder="Ex: 150.00" step="0.01">
                 </div>
 
-                <div class="input-group">
+                <div class="grupo-input">
                     <label for="taxa-servico">Taxa de Serviço (%)</label>
                     <input type="number" id="taxa-servico" value="10" placeholder="Ex: 10" step="1">
                 </div>
 
-                <div class="input-group">
+                <div class="grupo-input">
                     <label for="num-pessoas">Número de Pessoas</label>
                     <input type="number" id="num-pessoas" placeholder="Ex: 4" step="1">
                 </div>
 
-                <button id="btn-calcular" class="btn-principal">Calcular</button>
+                <button id="botao-calcular" class="botao-principal">Calcular</button>
 
-                <div id="resultado-display" class="resultado-simples">
+                <div id="area-resultado" class="resultado-simples">
                     <h3 id="texto-resultado">Insira os valores para calcular</h3>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="main-footer">
-        <p>&copy; 2026 MultiWeb - <a href="https://github.com/guhenrih" target="_blank">Gustavo Henrique de Almeida</a>.</p>
+    <footer class="rodape-principal">
+        <p class="texto-centralizado">&copy; 2026 MultiWeb - <a href="https://github.com/guhenrih" target="_blank">Gustavo Henrique de Almeida</a>.</p>
     </footer>
 
     <script src="../javascript/js_racha_conta.js"></script>
