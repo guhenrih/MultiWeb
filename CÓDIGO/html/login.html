@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiWeb - Login</title>
+    <link rel="stylesheet" href="../styles/style_ferramentas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="conteudo-cabecalho">
+            <a href="index.html" class="botao-icone">
+                <img src="../icones/voltar.svg" alt="seta para voltar" class="botao-icone">
+            </a>
+            <a href="index.html"><h1 class="logomarca">MultiWeb</h1></a>
+            
+            <div class="acoes">
+                <button type="button" class="botao-icone" id="botao-tema">
+                    <img src="../icones/modo_escuro.svg" alt="tema claro ou escuro">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+        <div class="container-ferramenta">
+            
+            <div class="cabecalho-ferramenta">
+                <i class="fas fa-user-circle" style="font-size: 5rem; color: var(--cor1); margin-bottom: 1rem;"></i>
+                <h2>Crie sua Conta</h2>
+                <p>Preencha os dados para acessar o MultiWeb.</p>
+            </div>
+
+            <div class="caixa-calculadora">
+                <div class="grupo-input">
+                    <label for="nome-usuario">Nome de Usuário</label>
+                    <input type="text" id="nome-usuario" placeholder="Ex: Gustavo">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="email-usuario">E-mail</label>
+                    <input type="email" id="email-usuario" placeholder="Ex: gustavo@email.com">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="senha-usuario">Senha</label>
+                    <input type="password" id="senha-usuario" placeholder="Mínimo 6 dígitos (letras e números)">
+                </div>
+
+                <button id="botao-entrar" class="botao-principal">Entrar</button>
+
+                <div id="area-resultado" class="resultado-simples" style="display: none;">
+                    <h3 id="texto-resultado"></h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape-principal">
+        <p class="texto-centralizado">&copy; 2026 MultiWeb - <a href="https://github.com/guhenrih" target="_blank">Gustavo Henrique de Almeida</a>.</p>
+    </footer>
+
+    <script src="../javascript/js_login.js"></script>
+    <script src="../javascript/js_tema.js"></script>
+</body>
+</html>
